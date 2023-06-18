@@ -1,38 +1,95 @@
+
+body {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.item {
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card-img {
+width: 100% !important; 
+height: 200px  !important;
+border-radius: 0% !important;
+}
+.card {
+  box-shadow: black 20px;
+  border-radius: 0% !important;
+}
+.g-4{
+  padding-top: 10%;
+  background-color:whitesmoke;
+}
+.product-link{
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.product-grid .price{
+  color: green;
+  font-weight: 700;
+  font-size: 120%;
+}
+.product-grid .encient-price{
+  color: red;
+  font-weight: 500;
+  font-size: 90%;
+}
+.encient-price{
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.encient-price::after{
+  content: "";
+  width: 25%;
+  height: 1px;
+  background: black;
+  position: absolute;
+  bottom: 10px;
+  left:38%;
+} 
+.buy-now{
+
+  padding: 3% 5% 3% 5%;
+  margin-bottom: 5%;
+  color: aliceblue;
+  background-color:red;
+  border: none;
+  margin-top: 5%;
+}
+.carousel {
+  max-width: 100%;
+}
+.carousel-item img{
+  width: fit-content;
+  height: 600px;
+}
+.form-commande{
+  border: 3px solid red;
+  padding: 2%;
+  justify-content: center;
+}
+.input{
+  margin-top: 2%;
+}
+.product-description{
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
